@@ -7,20 +7,21 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "typescript-study", ".", "{F
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_54954"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\Dev\typescript-study\"
+		Debug.AspNetCompiler.PhysicalPath = "..\typescript-study\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54954\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_54954"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\Dev\typescript-study\"
+		Release.AspNetCompiler.PhysicalPath = "..\typescript-study\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54954\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "54954"
+		SlnRelativePath = "..\typescript-study\"
 	EndProjectSection
 EndProject
 Global
