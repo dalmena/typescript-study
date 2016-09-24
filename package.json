@@ -1,0 +1,38 @@
+{
+  "name": "typescript-study",
+  "version": "1.0.0",
+  "description": "typescript\u001b[D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dpracticing typescript with material of www.typescriptlang.org",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsalmena/typescript-study.git"
+  },
+  "keywords": [
+    "typescript",
+    "learning",
+    "handbook"
+  ],
+  "author": {
+    "name": "Douglas Almena",
+    "email": "dsalmena@gmail.com",
+    "url": "https://github.com/dsalmena"
+  },
+  "contributors": [
+    {
+      "name": "Miguel Almeida",
+      "email": "miguelcjalmeida@gmail.com",
+      "url": "https://github.com/miguelcjalmeida"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsalmena/typescript-study/issues"
+  },
+  "homepage": "https://github.com/dsalmena/typescript-study#readme",
+  "devDependencies": {
+    "typescript": "^2.0.3"
+  }
+}
