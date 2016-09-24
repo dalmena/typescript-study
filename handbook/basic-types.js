@@ -1,19 +1,17 @@
-let isDone = false;
-let decimal = 6;
-let hex = 0xf00d;
-let binary = 0b1010;
-let octal = 0o744;
-let color = "blue";
+var isDone = false;
+var decimal = 6;
+var hex = 0xf00d;
+var binary = 10;
+var octal = 484;
+var color = "blue";
 color = 'red';
-let fullName = `Bob Bobbington`;
-let age = 37;
-let sentence = `Hello, my name is ${fullName}.
-
-I'll be ${age + 1} years old next month.`;
-let list = [1, 2, 3];
-let list2 = [1, 2, 3];
+var fullName = "Bob Bobbington";
+var age = 37;
+var sentence = "Hello, my name is " + fullName + ".\n\nI'll be " + (age + 1) + " years old next month.";
+var list = [1, 2, 3];
+var list2 = [1, 2, 3];
 // Declare a tuple type
-let x;
+var x;
 // Initialize it
 x = ["hello", 10]; // OK
 // Initialize it incorrectly
@@ -30,7 +28,7 @@ var Color;
     Color[Color["Blue"] = 2] = "Blue";
 })(Color || (Color = {}));
 ;
-let c = Color.Green;
+var c = Color.Green;
 var Color2;
 (function (Color2) {
     Color2[Color2["Red"] = 0] = "Red";
@@ -38,7 +36,7 @@ var Color2;
     Color2[Color2["Blue"] = 16] = "Blue";
 })(Color2 || (Color2 = {}));
 ;
-let c2 = Color2.Green;
+var c2 = Color2.Green;
 var Color3;
 (function (Color3) {
     Color3[Color3["Red"] = 1] = "Red";
@@ -46,25 +44,25 @@ var Color3;
     Color3[Color3["Blue"] = 4] = "Blue";
 })(Color3 || (Color3 = {}));
 ;
-let c3 = Color3.Green;
-let colorName = Color[2];
+var c3 = Color3.Green;
+var colorName = Color[2];
 alert(colorName);
-let notSure = 4;
+var notSure = 4;
 notSure = "maybe a string instead";
 notSure = false; // okay, definitely a boolean
 notSure.ifItExists(); // okay, ifItExists might exist at runtime
 notSure.toFixed(); // okay, toFixed exists (but the compiler doesn't check)
-let prettySure = 4;
+var prettySure = 4;
 //prettySure.toFixed(); // Error: Property 'toFixed' doesn't exist on type 'Object'.
-let list3 = [1, true, "free"];
+var list3 = [1, true, "free"];
 list3[1] = 100;
 function warnUser() {
     alert("This is my warning message");
 }
-let unusable = undefined;
+var unusable = undefined;
 // Not much else we can assign to these variables!
-let u = undefined;
-let n = null;
-let someValue = "this is a string";
-let strLength = someValue.length;
-let strLength2 = someValue.length;
+var u = undefined;
+var n = null;
+var someValue = "this is a string";
+var strLength = someValue.length;
+var strLength2 = someValue.length;
