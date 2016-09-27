@@ -1,16 +1,16 @@
 //Example 1
 
-(function(){
+ExampleRunner.run(function(console){
     function add(x: number, y: number): number {
         return x + y;
     }
 
     let myAdd = function(x: number, y: number): number { return x+y; };
-})();
+});
 
 //Example 2
 
-(function(){
+ExampleRunner.run(function(console){
     let myAdd: (x: number, y: number)=>number =
         function(x: number, y: number): number { return x+y; };
 
@@ -22,11 +22,11 @@
     // The parameters 'x' and 'y' have the type number
     let myAdd3: (baseValue:number, increment:number) => number =
         function(x, y) { return x + y; };
-})();
+});
 
 //Example 3
 
-(function(){
+ExampleRunner.run(function(console){
     function buildName(firstName: string, lastName: string) {
         return firstName + " " + lastName;
     }
@@ -34,11 +34,11 @@
     //let result1 = buildName("Bob");                  // error, too few parameters
     //let result2 = buildName("Bob", "Adams", "Sr.");  // error, too many parameters
     let result3 = buildName("Bob", "Adams");         // ah, just right
-})();
+});
 
 //Example 4
 
-(function(){
+ExampleRunner.run(function(console){
     function buildName(firstName: string, lastName = "Smith") {
         let fullName = firstName + " " + lastName;
         console.log(fullName);
@@ -50,11 +50,11 @@
     let result3 = buildName("Bob", null);       // still works, also returns "Bob Smith"
     //let result3 = buildName("Bob", "Adams", "Sr.");  // error, too many parameters
     let result4 = buildName("Bob", "Adams");         // ah, just right
-})();
+});
 
 //Example 5
 
-(function(){
+ExampleRunner.run(function(console){
     function buildName(firstName: string, lastName?: string) {
         // ...
         return "";
@@ -67,11 +67,11 @@
 
     let test : (firstName: string, lastName?: string) => string = buildName;
     test = buildName2;
-})();
+});
 
 //Example 6
 
-(function(){
+ExampleRunner.run(function(console){
     function buildName(firstName = "Will", lastName: string) {
         return firstName + " " + lastName;
     }
@@ -80,22 +80,22 @@
     //let result2 = buildName("Bob", "Adams", "Sr.");  // error, too many parameters
     let result3 = buildName("Bob", "Adams");         // okay and returns "Bob Adams"
     let result4 = buildName(undefined, "Adams");     // okay and returns "Will Adams"
-})();
+});
 
 //Example 7
 
-(function(){
+ExampleRunner.run(function(console){
     function buildName(firstName: string, ...restOfName: string[]) {
         return firstName + " " + restOfName.join(" ");
     }
 
     let employeeName = buildName("Joseph", "Samuel", "Lucas", "MacKinzie");
     let buildNameFun: (fname: string, ...rest: string[]) => string = buildName;
-})();
+});
 
 //Example 8
 
-(function(){
+ExampleRunner.run(function(console){
     /* --noImplicitThis
     let deck = {
         suits: ["hearts", "spades", "clubs", "diamonds"],
@@ -114,11 +114,11 @@
     let pickedCard = cardPicker();
 
     alert("card: " + pickedCard.card + " of " + pickedCard.suit);*/
-})();
+});
 
 //Example 9
 
-(function(){
+ExampleRunner.run(function(console){
   /* --noImplicitThis  
     let deck = {
         suits: ["hearts", "spades", "clubs", "diamonds"],
@@ -139,11 +139,11 @@
 
     alert("card: " + pickedCard.card + " of " + pickedCard.suit);
 */
-})();
+});
 
 //Example 10
 
-(function(){
+ExampleRunner.run(function(console){
     interface Card {
         suit: string;
         card: number;
@@ -171,11 +171,11 @@
     let pickedCard = cardPicker();
 
     alert("card: " + pickedCard.card + " of " + pickedCard.suit);
-})();
+});
 
 //Example 11
 
-(function(){
+ExampleRunner.run(function(console){
     interface UIElement {
         addClickListener(onclick: (this: void, e: Event) => void): void;
     }
@@ -191,11 +191,11 @@
 
     let uiElement = <UIElement> {};
     uiElement.addClickListener(h.onClickGood); 
-})();
+});
 
 //Example 12
 
-(function(){
+ExampleRunner.run(function(console){
     interface UIElement {
         addClickListener(onclick: (this: void, e: Event) => void): void;
     }
@@ -210,11 +210,11 @@
     let uiElement = <UIElement> {};
     uiElement.addClickListener(h.onClickGood); 
 
-})();
+});
 
 //Example 13
 
-(function(){
+ExampleRunner.run(function(console){
     let suits = ["hearts", "spades", "clubs", "diamonds"];
 
     function pickCard(x): any {
@@ -237,11 +237,11 @@
 
     let pickedCard2 = pickCard(15);
     alert("card: " + pickedCard2.card + " of " + pickedCard2.suit);
-})();
+});
 
 //Example 14
 
-(function(){
+ExampleRunner.run(function(console){
     let suits = ["hearts", "spades", "clubs", "diamonds"];
 
     function pickCard(x: {suit: string; card: number; }[]): number;
@@ -266,6 +266,6 @@
 
     let pickedCard2 = pickCard(15);
     alert("card: " + pickedCard2.card + " of " + pickedCard2.suit);
-})();
+});
 
 
