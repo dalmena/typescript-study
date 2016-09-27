@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example Runner</title>
+	<meta charset="utf-8" />
+    <script src="example-runner.js"></script>
+    <link href="example-runner.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <script>
+        ExampleRunner.run(function(console){
+            console.log('test', 'lol', {obj: 1}, 1);
+            console.log('test2');
+        });
+        ExampleRunner.run(function(console){
+            console.log('test');
+            console.log('test2');
+        });
+        ExampleRunner.run(function(console){
+            console.log('test');
+            console.log('test2');
+        });
+    </script>
+</body>
+</html>
