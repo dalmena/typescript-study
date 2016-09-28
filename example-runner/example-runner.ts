@@ -79,8 +79,14 @@ class ElementExampleRunner implements ExampleRunner {
 
         let codeExampleElement = this.document.createElement("pre");
         codeExampleElement.className = "code-example closed";
-        codeExampleElement.innerText = runnableExample.toString();
         
+        let codeContentExampleElement = this.document.createElement("code");
+        codeContentExampleElement.className = "javascript";
+        codeContentExampleElement.innerText = runnableExample.toString();
+        codeExampleElement.appendChild(codeContentExampleElement);
+
+        (<any>window).hljs.highlightBlock(codeContentExampleElement);
+
         let listener : (this: HTMLPreElement, ev: UIEvent) => any = function(){
             if(this.className == "code-example closed")
                 return this.className = "code-example opened";
@@ -114,18 +120,28 @@ class ExampleRunner {
     static run(runnableExample: IRunnableExample){
         if(window.document.body == null){
             ExampleRunner.runnableBuffer.push(runnableExample);
+            return;
         }
+
+        ExampleRunner.createRunner();
+
+        ExampleRunner.runner.run(runnableExample);
     }
 
     static runBuffer(){
-        ExampleRunner.runner = new ElementExampleRunner(window.document.body, window.document, window.console);                
+        ExampleRunner.createRunner();                        
         
         for(let runnable of ExampleRunner.runnableBuffer){
             ExampleRunner.runner.run(runnable);                
         }
     }
+
+    static createRunner(){
+        if(ExampleRunner.runner == null)
+            ExampleRunner.runner = new ElementExampleRunner(window.document.body, window.document, window.console);
+    }
 }
 
 window.onload = function(){
-    ExampleRunner.runBuffer();
+    ExampleRunner.runBuffer();    
 }

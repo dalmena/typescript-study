@@ -5,6 +5,8 @@
 	<meta charset="utf-8" />
     <script src="example-runner.js"></script>
     <link href="example-runner.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="highlightjs/styles/atelier-cave-light.css">
+    <script src="highlightjs/highlight.pack.js"></script>
 </head>
 <body>
     <script>
@@ -20,6 +22,8 @@
             console.log('test');
             console.log('test2');
         });
+
+        hljs.initHighlightingOnLoad();
     </script>
 </body>
 </html>
