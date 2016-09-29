@@ -256,4 +256,6 @@ paket-files/
 .vscode/
 
 # Javascript 
-*.js
+handbook/**/*.js
+example-runner/*.js
+quick-start/*.js
