@@ -3,7 +3,7 @@ interface IRunnableExample {
 }
 
 interface IConsole {
-    log (message?:string, ...optionalParameters: any[]) : void;
+    log (message?:any, ...optionalParameters: any[]) : void;
 }
 
 interface IExampleRunner {
@@ -16,13 +16,13 @@ class HtmlConsole implements IConsole{
     constructor(private console: Console, private rootElement: HTMLElement, private document: Document){
     }
 
-    log (message?:string, ...optionalParameters: any[]) : void {
+    log (message?:any, ...optionalParameters: any[]) : void {
         this.console.log(message, optionalParameters);
 
         this.rootElement.appendChild(this.buildMessageElement(message, ...optionalParameters));        
     }
 
-    private buildMessageElement(message?:string, ...optionalParameters: any[]) : HTMLElement {
+    private buildMessageElement(message?:any, ...optionalParameters: any[]) : HTMLElement {
         let lineElement = document.createElement("div");
         lineElement.className = "line";
 
