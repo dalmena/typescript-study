@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "watch": true
+    "watch": true,
+    "noImplicitUseStrict": true,
+    "noImplicitReturns": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": false
   }
 }
